@@ -1,14 +1,18 @@
+package pkg;
 
 public class Empleado {
 	
 	public enum TipoEmpleado{Vendedor, Encargado};
 	
-	float salarioBase;
-	float primas;
-	float extras;
-	
 	public float calculoNominaBruta(TipoEmpleado tipo, float ventaMes, float horasExtra) {
-		if(tipo ==TipoEmpleado.Encargado) {
+		
+		
+		float salarioBase = 0;
+		float primas;
+		float extras;
+		
+		
+		if(tipo ==TipoEmpleado.Encargado) {	
 			
 			salarioBase = 2500;
 			
@@ -29,10 +33,12 @@ public class Empleado {
 		
 		//Determinar las horas extras
 		extras = horasExtra *30;
+		
+		
 		return salarioBase + primas + extras;
 	}
 	
-	public float calculoNominaNeta(int nominaBruta) {
+	public float calculoNominaNeta(float nominaBruta) {
 		
 		float retencion = 0;
 		if (nominaBruta >2500) {
