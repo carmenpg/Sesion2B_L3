@@ -1,5 +1,6 @@
 package pkg;
 
+
 public class Empleado {
 	
 	public enum TipoEmpleado {Vendedor, Encargado};
@@ -56,5 +57,4 @@ public class Empleado {
 	}
 
 }
-
 

@@ -15,14 +15,21 @@ import pkg.Empleado.TipoEmpleado;
 class EmpleadoTest {
 
 
-	@Test
-	void testCalculoNominaBruta() {
-		
-	}
+	@BeforeAll
+	  static void setUpBeforeClass() throws Exception {
+	  }
 
-	@Test
-	void testCalculoNominaNeta() {
-	}
+	  @AfterAll
+	  static void tearDownAfterClass() throws Exception {
+	  }
+
+	  @BeforeEach
+	  void setUp() throws Exception {
+	  }
+
+	  @AfterEach
+	  void tearDown() throws Exception {
+	  }
 	
   // Pruebas para el método calculoNominaBruta
 
@@ -65,14 +72,14 @@ class EmpleadoTest {
 	    // Pruebas para el tipo Encargado
 	    @Test
 	    void testCalculoNominaBruta_Encargado_LimiteInferiorSinPrima(TestInfo  info) {
-	    	float expected = 2100;
+	    	float expected = 2500;
 	    	float actual = Empleado.calculoNominaBruta(TipoEmpleado.Encargado, 999, 0);
-	        assertEquals(expected, actual );
+	        assertEquals(expected, actual);
 	    }
 
 	    @Test
 	    void testCalculoNominaBruta_Encargado_LimiteSuperiorSinPrima(TestInfo  info) {
-	    	float expected = 2100;
+	    	float expected = 2600;
 	    	float actual = Empleado.calculoNominaBruta(TipoEmpleado.Encargado, 1000, 0);
 	        assertEquals(expected, actual);
 	    }
@@ -116,9 +123,9 @@ class EmpleadoTest {
 
 	    @Test
 	    void testCalculoNominaNeta_ConRetencion15_LimiteSuperior(TestInfo  info) {
-	    	float expected = 2499;
-	    	float actual =  Empleado.calculoNominaNeta(2499);
-	        assertEquals(expected, Empleado.calculoNominaNeta(2499), 0.01);
+	    	float expected = 2091;
+	    	float actual =  Empleado.calculoNominaNeta(2460);
+	        assertEquals(expected, actual);
 	    }
 
 	    @Test
